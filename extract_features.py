@@ -59,7 +59,7 @@ def main():
 
     audio_files = list(all_audio_files - processed)
 
-    print(f"🎵 New files to process: {len(audio_files)}")
+    print(f"New files to process: {len(audio_files)}")
 
     features_acc = []
     paths_acc = []
@@ -92,10 +92,10 @@ def main():
         np.save(FEATURES_FILE, np.array(features_acc))
         np.save(PATHS_FILE, np.array(paths_acc))
 
-        print("💾 State saved successfully")
+        print("State saved successfully")
 
     except Exception as e:
-        print(f"❌ Error while saving state: {e}")
+        print(f"Error while saving state: {e}")
 
 # ========== WINDOWS ENTRY POINT ==========
 if __name__ == "__main__":
